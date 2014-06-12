@@ -1,0 +1,15 @@
+Step 0 : FROM 10.3.13.125:5000/brew/rhel7:latest
+ ---> 92c518a45f11
+Step 1 : MAINTAINER scollier <scollier@redhat.com>
+ ---> Using cache
+ ---> 8eb0e5271a54
+Step 2 : RUN  yum -y update; yum clean all
+ ---> Using cache
+ ---> 35e793bd330a
+Step 3 : RUN  yum -y install couchdb; yum clean all
+ ---> Using cache
+ ---> 2320e98154ab
+Step 4 : RUN  sed -e 's/^bind_address = .*$/bind_address = 0.0.0.0/' -i /etc/couchdb/default.ini
+ ---> Running in a279efd40fc4
+[91msed: can't read /etc/couchdb/default.ini: No such file or directory
+[0m

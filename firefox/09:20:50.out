@@ -1,0 +1,18 @@
+Step 0 : FROM 10.3.13.125:5000/brew/rhel7:latest
+ ---> 92c518a45f11
+Step 1 : MAINTAINER scollier <emailscottcollier@gmail.com>
+ ---> Using cache
+ ---> 9949dc405a88
+Step 2 : RUN yum -y update; yum clean all
+ ---> Using cache
+ ---> a286293650d1
+Step 3 : RUN yum -y install x11vnc firefox xorg-x11-server-Xvfb xorg-x11-twm tigervnc-server xterm xorg-x11-font xulrunner-26.0-2.fc20.x86_64 dejavu-sans-fonts dejavu-serif-fonts xdotool; yum clean all
+ ---> Using cache
+ ---> 29ad54922323
+Step 4 : ADD ./xstartup /
+ ---> Using cache
+ ---> 3d9269a41fcf
+Step 5 : RUN mkdir /.vnc
+ ---> Using cache
+ ---> 15e75720866e
+Step 6 : RUN x11vnc -storepasswd 123456 /.vnc/passwd

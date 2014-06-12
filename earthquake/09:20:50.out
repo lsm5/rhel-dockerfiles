@@ -1,0 +1,13 @@
+Step 0 : FROM 10.3.13.125:5000/brew/rhel7:latest
+ ---> 92c518a45f11
+Step 1 : MAINTAINER "Maciej Lasyk" <maciek@lasyk.info>
+ ---> Using cache
+ ---> 81180e4d254e
+Step 2 : RUN yum -y update; yum clean all
+ ---> Using cache
+ ---> 4b77fb1117b6
+Step 3 : RUN yum -y install openssl-devel openssl readline readline-devel gcc gcc-c++ rubygems rubygems-devel ruby ruby-devel; yum clean all
+ ---> Using cache
+ ---> 61a473151ccd
+Step 4 : RUN gem install earthquake
+ ---> Running in 1c29d16d915a
